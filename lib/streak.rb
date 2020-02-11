@@ -13,6 +13,7 @@ require "streak/field"
 require "streak/field_value"
 require "streak/pipeline"
 require "streak/stage"
+require "streak/thread"
 require "streak/user"
 require "streak/search"
 require "streak/file"
@@ -59,7 +60,7 @@ module Streak
       :verify_ssl => false,
       :url  => api_url(url, api_version),
       :user => api_key,
-      :payload => payload
+      :payload => payload,
     }
 
     begin
